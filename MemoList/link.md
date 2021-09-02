@@ -53,5 +53,8 @@ AutoLayoutのWarningが消えない
 TabBarControllerを用いた遷移の実装方法
 - https://qiita.com/chubura/items/03a3cddf8fe17361c5b2
 
+SFSymbols
+- https://tommy10344.hatenablog.com/entry/2019/11/03/141523
+
 ## github関連
 
