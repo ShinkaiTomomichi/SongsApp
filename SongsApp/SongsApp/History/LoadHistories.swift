@@ -15,7 +15,7 @@ class LoadHistories {
     var dateUnique: [Date] = []
     
     func start() {
-        // セット済みであればもう動かないようにしたい
+        // TODO: セット済みであればもう動かないようにしたい
         setHistories()
         setHistoriesByDate()
     }

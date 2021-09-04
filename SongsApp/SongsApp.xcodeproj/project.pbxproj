@@ -16,6 +16,10 @@
 		DA0DBB2E26E30B36004E0B89 /* HistoryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB2D26E30B36004E0B89 /* HistoryEditViewController.swift */; };
 		DA0DBB3026E30B55004E0B89 /* HistoryEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0DBB2F26E30B55004E0B89 /* HistoryEdit.storyboard */; };
 		DA0DBB3226E32866004E0B89 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB3126E32866004E0B89 /* SampleTests.swift */; };
+		DA0DBB3426E3D0B2004E0B89 /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB3326E3D0B2004E0B89 /* MyListViewController.swift */; };
+		DA0DBB3626E3D13C004E0B89 /* MyList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0DBB3526E3D13C004E0B89 /* MyList.storyboard */; };
+		DA0DBB3926E3D18E004E0B89 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB3826E3D18E004E0B89 /* SettingViewController.swift */; };
+		DA0DBB3B26E3D1D5004E0B89 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0DBB3A26E3D1D5004E0B89 /* Setting.storyboard */; };
 		DA57C241252CBD05005F4A71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C240252CBD05005F4A71 /* AppDelegate.swift */; };
 		DA57C243252CBD05005F4A71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C242252CBD05005F4A71 /* SceneDelegate.swift */; };
 		DA57C24A252CBD08005F4A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA57C249252CBD08005F4A71 /* Assets.xcassets */; };
@@ -64,6 +68,10 @@
 		DA0DBB2D26E30B36004E0B89 /* HistoryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEditViewController.swift; sourceTree = "<group>"; };
 		DA0DBB2F26E30B55004E0B89 /* HistoryEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryEdit.storyboard; sourceTree = "<group>"; };
 		DA0DBB3126E32866004E0B89 /* SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTests.swift; sourceTree = "<group>"; };
+		DA0DBB3326E3D0B2004E0B89 /* MyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
+		DA0DBB3526E3D13C004E0B89 /* MyList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyList.storyboard; sourceTree = "<group>"; };
+		DA0DBB3826E3D18E004E0B89 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		DA0DBB3A26E3D1D5004E0B89 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		DA57C23D252CBD05005F4A71 /* SongsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA57C240252CBD05005F4A71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA57C242252CBD05005F4A71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +149,15 @@
 			path = Edit;
 			sourceTree = "<group>";
 		};
+		DA0DBB3726E3D157004E0B89 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				DA0DBB3826E3D18E004E0B89 /* SettingViewController.swift */,
+				DA0DBB3A26E3D1D5004E0B89 /* Setting.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		DA57C234252CBD05005F4A71 = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +185,9 @@
 				DA57C242252CBD05005F4A71 /* SceneDelegate.swift */,
 				DAABC2D526DDB1380005C236 /* Root */,
 				DAB64D9F26E27BC80054D150 /* Home */,
-				DAABC2D626DF75E30005C236 /* MyList */,
 				DAABC2D726DF75F80005C236 /* History */,
+				DAABC2D626DF75E30005C236 /* MyList */,
+				DA0DBB3726E3D157004E0B89 /* Setting */,
 				DAB64DA026E27CA00054D150 /* Song */,
 				DA01EEC226E06F7B00EFCF21 /* API */,
 				DA0DBB2926E2F701004E0B89 /* SQLite */,
@@ -211,6 +229,8 @@
 		DAABC2D626DF75E30005C236 /* MyList */ = {
 			isa = PBXGroup;
 			children = (
+				DA0DBB3326E3D0B2004E0B89 /* MyListViewController.swift */,
+				DA0DBB3526E3D13C004E0B89 /* MyList.storyboard */,
 			);
 			path = MyList;
 			sourceTree = "<group>";
@@ -373,10 +393,12 @@
 			files = (
 				DA01EEB926DF799300EFCF21 /* Histories.storyboard in Resources */,
 				DA0DBB3026E30B55004E0B89 /* HistoryEdit.storyboard in Resources */,
+				DA0DBB3626E3D13C004E0B89 /* MyList.storyboard in Resources */,
 				DAABC2D926DF77560005C236 /* Root.storyboard in Resources */,
 				DA57C24D252CBD08005F4A71 /* LaunchScreen.storyboard in Resources */,
 				DA01EEB326DF793100EFCF21 /* Home.storyboard in Resources */,
 				DA57C24A252CBD08005F4A71 /* Assets.xcassets in Resources */,
+				DA0DBB3B26E3D1D5004E0B89 /* Setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,8 +425,10 @@
 			files = (
 				DA01EEB726DF798100EFCF21 /* HistoriesViewController.swift in Sources */,
 				DAB64D9A26E1245A0054D150 /* UIImage+.swift in Sources */,
+				DA0DBB3426E3D0B2004E0B89 /* MyListViewController.swift in Sources */,
 				DA57C241252CBD05005F4A71 /* AppDelegate.swift in Sources */,
 				DAB64D8826E0B24F0054D150 /* HTTPMethod.swift in Sources */,
+				DA0DBB3926E3D18E004E0B89 /* SettingViewController.swift in Sources */,
 				DA01EEB526DF795000EFCF21 /* HomeViewController.swift in Sources */,
 				DAB64D9226E0B3030054D150 /* GitHubAPISearchResponse.swift in Sources */,
 				DA57C243252CBD05005F4A71 /* SceneDelegate.swift in Sources */,

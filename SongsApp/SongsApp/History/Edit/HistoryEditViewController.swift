@@ -9,6 +9,7 @@ import UIKit
 
 class HistoryEditViewController: UIViewController {
     // 編集か新規追加で画面構成を変更したい
+    // collectionViewに候補のサムネイルとタイトルを表示したい
 
     override func viewDidLoad() {
         super.viewDidLoad()

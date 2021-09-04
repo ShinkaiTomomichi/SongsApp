@@ -8,7 +8,8 @@
 import UIKit
 
 class HistoriesViewController: UIViewController {
-
+    // このページ一次リストと二次リストの表示に対応できると良いかも？
+    
     @IBOutlet weak var songedListTableView: UITableView!
     var histories: [History] = []
     var historiesByDate: [[History]] = [[]]
