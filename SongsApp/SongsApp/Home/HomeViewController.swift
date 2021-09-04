@@ -11,7 +11,12 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // セルには履歴からか新規で追加するか
+        // 適当にSongsからおすすめを取り出す
+        // おすすめを表示する方法はいくつか用意しよう
+        navigationItem.title = "ホーム画面"
+        
         // Do any additional setup after loading the view.
     }
     

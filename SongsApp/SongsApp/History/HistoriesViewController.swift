@@ -7,10 +7,12 @@
 
 import UIKit
 
-class SongedListViewController: UIViewController {
+class HistoriesViewController: UIViewController {
 
     @IBOutlet weak var songedListTableView: UITableView!
-    var songedList = MockLoadSongedList.init().getSongedList()
+    var histories: [History] = []
+    var historiesByDate: [[History]] = [[]]
+    var dateUnique: [Date] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +22,22 @@ class SongedListViewController: UIViewController {
         songedListTableView.delegate = self
         songedListTableView.dataSource = self
         
+        MockLoadHistories.shared.start()
+        self.histories = MockLoadHistories.shared.histories
+        self.historiesByDate = MockLoadHistories.shared.historiesByDate
+        self.dateUnique = MockLoadHistories.shared.dateUnique
+        
         // TODO: 削除
         // sampleGitHubAPI(keyword: "swift")
     }
     
     @IBAction func addSongButtonTapped(_ sender: Any) {
-        print("ボタンが押されました")
+        // 適当な情報をViewControllerに渡して遷移
+        let historyEditStoryboard = UIStoryboard(name: "HistoryEdit", bundle: nil)
+        let historyEditVC = historyEditStoryboard.instantiateInitialViewController() as! HistoryEditViewController
+        // ここでviewcontrollerに編集 or 追加の情報を渡しておく
+        self.navigationController?.pushViewController(historyEditVC, animated: true)
+        
     }
     
     private func getImageByUrl(url: String) -> UIImage{
@@ -41,27 +53,37 @@ class SongedListViewController: UIViewController {
 }
 
 // MARK:- UITableViewDelegate, UITableViewDataSource
-extension SongedListViewController: UITableViewDelegate, UITableViewDataSource {
+extension HistoriesViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return dateUnique.count
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   titleForHeaderInSection section: Int) -> String? {
+        return self.dateUnique[section].stringFromDate()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return songedList.count
+        return historiesByDate[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 設定されたIdentifierに対応するcellを取得する
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SongedListTableViewCell", for: indexPath) as! SongedListTableViewCell
-        cell.titleLabel.text = songedList[indexPath.row].title!
-        cell.artistLabel.text = songedList[indexPath.row].artist!
-        cell.coverLabel.text = "Cover:" + (songedList[indexPath.row].cover ?? "なし")
-        cell.keyLabel.text = String(songedList[indexPath.row].key ?? 0)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoriesTableViewCell", for: indexPath) as! HistoriesTableViewCell
+        cell.titleLabel.text = historiesByDate[indexPath.section][indexPath.row].song?.title
+        cell.artistLabel.text = historiesByDate[indexPath.section][indexPath.row].song?.artist
+        cell.coverLabel.text = historiesByDate[indexPath.section][indexPath.row].song?.cover ?? ""
+        cell.keyLabel.text = String(historiesByDate[indexPath.section][indexPath.row].key)
+
         // ここの画像サイズを一律で同じにしたいが、Youtubeのサムネの比率ベースで良さそう
         // またここは画像ではなくボタンで良さそう
-        cell.thumbnailImage.image = getImageByUrl(url: songedList[indexPath.row].imageURL ?? "")
+        cell.thumbnailImage.image = getImageByUrl(url: historiesByDate[indexPath.section][indexPath.row].song?.getThumbnailLink() ?? "")
         return cell
     }
 }
 
 // MARK:- Sample
-extension SongedListViewController {
+extension HistoriesViewController {
     private func sampleGitHubAPI(keyword: String) {
         // APIクライアントの生成
         let client = GitHubClient()

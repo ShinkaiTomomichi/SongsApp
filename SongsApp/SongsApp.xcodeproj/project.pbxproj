@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		DA01EEB326DF793100EFCF21 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA01EEB226DF793100EFCF21 /* Home.storyboard */; };
 		DA01EEB526DF795000EFCF21 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01EEB426DF795000EFCF21 /* HomeViewController.swift */; };
-		DA01EEB726DF798100EFCF21 /* SongedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01EEB626DF798100EFCF21 /* SongedListViewController.swift */; };
-		DA01EEB926DF799300EFCF21 /* SongedList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA01EEB826DF799300EFCF21 /* SongedList.storyboard */; };
+		DA01EEB726DF798100EFCF21 /* HistoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01EEB626DF798100EFCF21 /* HistoriesViewController.swift */; };
+		DA01EEB926DF799300EFCF21 /* Histories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA01EEB826DF799300EFCF21 /* Histories.storyboard */; };
+		DA0DBB2826E2F5AE004E0B89 /* LoadSongs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB2726E2F5AE004E0B89 /* LoadSongs.swift */; };
+		DA0DBB2B26E30A24004E0B89 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB2A26E30A24004E0B89 /* Date+.swift */; };
+		DA0DBB2E26E30B36004E0B89 /* HistoryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB2D26E30B36004E0B89 /* HistoryEditViewController.swift */; };
+		DA0DBB3026E30B55004E0B89 /* HistoryEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0DBB2F26E30B55004E0B89 /* HistoryEdit.storyboard */; };
 		DA57C241252CBD05005F4A71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C240252CBD05005F4A71 /* AppDelegate.swift */; };
 		DA57C243252CBD05005F4A71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C242252CBD05005F4A71 /* SceneDelegate.swift */; };
 		DA57C24A252CBD08005F4A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA57C249252CBD08005F4A71 /* Assets.xcassets */; };
@@ -21,13 +25,15 @@
 		DAB64D8626E0A8660054D150 /* GitHubAPIClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D8526E0A8660054D150 /* GitHubAPIClientError.swift */; };
 		DAB64D8826E0B24F0054D150 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D8726E0B24F0054D150 /* HTTPMethod.swift */; };
 		DAB64D8A26E0B2D30054D150 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D8926E0B2D30054D150 /* Song.swift */; };
-		DAB64D8C26E0B2E50054D150 /* LoadSongedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D8B26E0B2E50054D150 /* LoadSongedList.swift */; };
-		DAB64D8E26E0B2ED0054D150 /* SongedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D8D26E0B2ED0054D150 /* SongedListTableViewCell.swift */; };
+		DAB64D8C26E0B2E50054D150 /* LoadHistories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D8B26E0B2E50054D150 /* LoadHistories.swift */; };
+		DAB64D8E26E0B2ED0054D150 /* HistoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D8D26E0B2ED0054D150 /* HistoriesTableViewCell.swift */; };
 		DAB64D9026E0B2F90054D150 /* GitHubAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D8F26E0B2F90054D150 /* GitHubAPIRequest.swift */; };
 		DAB64D9226E0B3030054D150 /* GitHubAPISearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D9126E0B3030054D150 /* GitHubAPISearchResponse.swift */; };
 		DAB64D9426E0B4E60054D150 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D9326E0B4E60054D150 /* GitHubAPI.swift */; };
 		DAB64D9626E107550054D150 /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D9526E107550054D150 /* GitHubClient.swift */; };
 		DAB64D9A26E1245A0054D150 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D9926E1245A0054D150 /* UIImage+.swift */; };
+		DAB64D9C26E250FF0054D150 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D9B26E250FF0054D150 /* String+.swift */; };
+		DAB64D9E26E26BF80054D150 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB64D9D26E26BF80054D150 /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +56,12 @@
 /* Begin PBXFileReference section */
 		DA01EEB226DF793100EFCF21 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		DA01EEB426DF795000EFCF21 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		DA01EEB626DF798100EFCF21 /* SongedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongedListViewController.swift; sourceTree = "<group>"; };
-		DA01EEB826DF799300EFCF21 /* SongedList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SongedList.storyboard; sourceTree = "<group>"; };
+		DA01EEB626DF798100EFCF21 /* HistoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoriesViewController.swift; sourceTree = "<group>"; };
+		DA01EEB826DF799300EFCF21 /* Histories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Histories.storyboard; sourceTree = "<group>"; };
+		DA0DBB2726E2F5AE004E0B89 /* LoadSongs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSongs.swift; sourceTree = "<group>"; };
+		DA0DBB2A26E30A24004E0B89 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		DA0DBB2D26E30B36004E0B89 /* HistoryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEditViewController.swift; sourceTree = "<group>"; };
+		DA0DBB2F26E30B55004E0B89 /* HistoryEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryEdit.storyboard; sourceTree = "<group>"; };
 		DA57C23D252CBD05005F4A71 /* SongsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA57C240252CBD05005F4A71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA57C242252CBD05005F4A71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,13 +78,15 @@
 		DAB64D8526E0A8660054D150 /* GitHubAPIClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIClientError.swift; sourceTree = "<group>"; };
 		DAB64D8726E0B24F0054D150 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		DAB64D8926E0B2D30054D150 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		DAB64D8B26E0B2E50054D150 /* LoadSongedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadSongedList.swift; sourceTree = "<group>"; };
-		DAB64D8D26E0B2ED0054D150 /* SongedListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongedListTableViewCell.swift; sourceTree = "<group>"; };
+		DAB64D8B26E0B2E50054D150 /* LoadHistories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadHistories.swift; sourceTree = "<group>"; };
+		DAB64D8D26E0B2ED0054D150 /* HistoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoriesTableViewCell.swift; sourceTree = "<group>"; };
 		DAB64D8F26E0B2F90054D150 /* GitHubAPIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPIRequest.swift; sourceTree = "<group>"; };
 		DAB64D9126E0B3030054D150 /* GitHubAPISearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPISearchResponse.swift; sourceTree = "<group>"; };
 		DAB64D9326E0B4E60054D150 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		DAB64D9526E107550054D150 /* GitHubClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
 		DAB64D9926E1245A0054D150 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		DAB64D9B26E250FF0054D150 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		DAB64D9D26E26BF80054D150 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +114,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DA01EEBB26DFC93200EFCF21 /* MyList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MyList;
-			sourceTree = "<group>";
-		};
 		DA01EEC226E06F7B00EFCF21 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +121,22 @@
 				DAB64D8726E0B24F0054D150 /* HTTPMethod.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		DA0DBB2926E2F701004E0B89 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		DA0DBB2C26E30AB8004E0B89 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				DA0DBB2D26E30B36004E0B89 /* HistoryEditViewController.swift */,
+				DA0DBB2F26E30B55004E0B89 /* HistoryEdit.storyboard */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 		DA57C234252CBD05005F4A71 = {
@@ -144,10 +165,12 @@
 				DA57C240252CBD05005F4A71 /* AppDelegate.swift */,
 				DA57C242252CBD05005F4A71 /* SceneDelegate.swift */,
 				DAABC2D526DDB1380005C236 /* Root */,
-				DAABC2D626DF75E30005C236 /* Home */,
-				DAABC2D726DF75F80005C236 /* SongedList */,
-				DA01EEBB26DFC93200EFCF21 /* MyList */,
+				DAB64D9F26E27BC80054D150 /* Home */,
+				DAABC2D626DF75E30005C236 /* MyList */,
+				DAABC2D726DF75F80005C236 /* History */,
+				DAB64DA026E27CA00054D150 /* Song */,
 				DA01EEC226E06F7B00EFCF21 /* API */,
+				DA0DBB2926E2F701004E0B89 /* SQLite */,
 				DAB64D9826E124330054D150 /* Extension */,
 				DA57C249252CBD08005F4A71 /* Assets.xcassets */,
 				DA57C24B252CBD08005F4A71 /* LaunchScreen.storyboard */,
@@ -182,25 +205,24 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		DAABC2D626DF75E30005C236 /* Home */ = {
+		DAABC2D626DF75E30005C236 /* MyList */ = {
 			isa = PBXGroup;
 			children = (
-				DA01EEB426DF795000EFCF21 /* HomeViewController.swift */,
-				DA01EEB226DF793100EFCF21 /* Home.storyboard */,
 			);
-			path = Home;
+			path = MyList;
 			sourceTree = "<group>";
 		};
-		DAABC2D726DF75F80005C236 /* SongedList */ = {
+		DAABC2D726DF75F80005C236 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				DA01EEB626DF798100EFCF21 /* SongedListViewController.swift */,
-				DAB64D8D26E0B2ED0054D150 /* SongedListTableViewCell.swift */,
-				DAB64D8926E0B2D30054D150 /* Song.swift */,
-				DAB64D8B26E0B2E50054D150 /* LoadSongedList.swift */,
-				DA01EEB826DF799300EFCF21 /* SongedList.storyboard */,
+				DA0DBB2C26E30AB8004E0B89 /* Edit */,
+				DA01EEB626DF798100EFCF21 /* HistoriesViewController.swift */,
+				DAB64D8D26E0B2ED0054D150 /* HistoriesTableViewCell.swift */,
+				DAB64D9D26E26BF80054D150 /* History.swift */,
+				DAB64D8B26E0B2E50054D150 /* LoadHistories.swift */,
+				DA01EEB826DF799300EFCF21 /* Histories.storyboard */,
 			);
-			path = SongedList;
+			path = History;
 			sourceTree = "<group>";
 		};
 		DAB64D9726E117D50054D150 /* GitHubAPI */ = {
@@ -219,8 +241,28 @@
 			isa = PBXGroup;
 			children = (
 				DAB64D9926E1245A0054D150 /* UIImage+.swift */,
+				DAB64D9B26E250FF0054D150 /* String+.swift */,
+				DA0DBB2A26E30A24004E0B89 /* Date+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DAB64D9F26E27BC80054D150 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DA01EEB426DF795000EFCF21 /* HomeViewController.swift */,
+				DA01EEB226DF793100EFCF21 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DAB64DA026E27CA00054D150 /* Song */ = {
+			isa = PBXGroup;
+			children = (
+				DAB64D8926E0B2D30054D150 /* Song.swift */,
+				DA0DBB2726E2F5AE004E0B89 /* LoadSongs.swift */,
+			);
+			path = Song;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +368,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA01EEB926DF799300EFCF21 /* SongedList.storyboard in Resources */,
+				DA01EEB926DF799300EFCF21 /* Histories.storyboard in Resources */,
+				DA0DBB3026E30B55004E0B89 /* HistoryEdit.storyboard in Resources */,
 				DAABC2D926DF77560005C236 /* Root.storyboard in Resources */,
 				DA57C24D252CBD08005F4A71 /* LaunchScreen.storyboard in Resources */,
 				DA01EEB326DF793100EFCF21 /* Home.storyboard in Resources */,
@@ -355,20 +398,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA01EEB726DF798100EFCF21 /* SongedListViewController.swift in Sources */,
+				DA01EEB726DF798100EFCF21 /* HistoriesViewController.swift in Sources */,
 				DAB64D9A26E1245A0054D150 /* UIImage+.swift in Sources */,
 				DA57C241252CBD05005F4A71 /* AppDelegate.swift in Sources */,
 				DAB64D8826E0B24F0054D150 /* HTTPMethod.swift in Sources */,
 				DA01EEB526DF795000EFCF21 /* HomeViewController.swift in Sources */,
 				DAB64D9226E0B3030054D150 /* GitHubAPISearchResponse.swift in Sources */,
 				DA57C243252CBD05005F4A71 /* SceneDelegate.swift in Sources */,
+				DAB64D9E26E26BF80054D150 /* History.swift in Sources */,
+				DA0DBB2E26E30B36004E0B89 /* HistoryEditViewController.swift in Sources */,
+				DAB64D9C26E250FF0054D150 /* String+.swift in Sources */,
+				DA0DBB2B26E30A24004E0B89 /* Date+.swift in Sources */,
+				DA0DBB2826E2F5AE004E0B89 /* LoadSongs.swift in Sources */,
 				DAB64D9626E107550054D150 /* GitHubClient.swift in Sources */,
 				DAB64D8A26E0B2D30054D150 /* Song.swift in Sources */,
 				DAB64D9426E0B4E60054D150 /* GitHubAPI.swift in Sources */,
-				DAB64D8E26E0B2ED0054D150 /* SongedListTableViewCell.swift in Sources */,
+				DAB64D8E26E0B2ED0054D150 /* HistoriesTableViewCell.swift in Sources */,
 				DAB64D9026E0B2F90054D150 /* GitHubAPIRequest.swift in Sources */,
 				DAB64D8626E0A8660054D150 /* GitHubAPIClientError.swift in Sources */,
-				DAB64D8C26E0B2E50054D150 /* LoadSongedList.swift in Sources */,
+				DAB64D8C26E0B2E50054D150 /* LoadHistories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
