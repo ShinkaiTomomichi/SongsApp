@@ -15,6 +15,7 @@
 		DA0DBB2B26E30A24004E0B89 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB2A26E30A24004E0B89 /* Date+.swift */; };
 		DA0DBB2E26E30B36004E0B89 /* HistoryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB2D26E30B36004E0B89 /* HistoryEditViewController.swift */; };
 		DA0DBB3026E30B55004E0B89 /* HistoryEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0DBB2F26E30B55004E0B89 /* HistoryEdit.storyboard */; };
+		DA0DBB3226E32866004E0B89 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB3126E32866004E0B89 /* SampleTests.swift */; };
 		DA57C241252CBD05005F4A71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C240252CBD05005F4A71 /* AppDelegate.swift */; };
 		DA57C243252CBD05005F4A71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C242252CBD05005F4A71 /* SceneDelegate.swift */; };
 		DA57C24A252CBD08005F4A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA57C249252CBD08005F4A71 /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		DA0DBB2A26E30A24004E0B89 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		DA0DBB2D26E30B36004E0B89 /* HistoryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEditViewController.swift; sourceTree = "<group>"; };
 		DA0DBB2F26E30B55004E0B89 /* HistoryEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryEdit.storyboard; sourceTree = "<group>"; };
+		DA0DBB3126E32866004E0B89 /* SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTests.swift; sourceTree = "<group>"; };
 		DA57C23D252CBD05005F4A71 /* SongsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA57C240252CBD05005F4A71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA57C242252CBD05005F4A71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				DA57C257252CBD08005F4A71 /* SongsAppTests.swift */,
+				DA0DBB3126E32866004E0B89 /* SampleTests.swift */,
 				DA57C259252CBD08005F4A71 /* Info.plist */,
 			);
 			path = SongsAppTests;
@@ -425,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA57C258252CBD08005F4A71 /* SongsAppTests.swift in Sources */,
+				DA0DBB3226E32866004E0B89 /* SampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
