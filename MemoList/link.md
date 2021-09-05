@@ -52,9 +52,14 @@ AutoLayoutのWarningが消えない
 
 TabBarControllerを用いた遷移の実装方法
 - https://qiita.com/chubura/items/03a3cddf8fe17361c5b2
+- https://dev.classmethod.jp/articles/uitabbar_and_uitabbarcontroller/
 
 SFSymbols
 - https://tommy10344.hatenablog.com/entry/2019/11/03/141523
+
+ファイル読み込み
+- https://qiita.com/nnsnodnb/items/9344a1955c5cf50e61af
+
 
 ## github関連
 

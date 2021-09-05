@@ -49,7 +49,7 @@ class HistoriesViewController: UIViewController {
         } catch let err {
             print("Error : \(err.localizedDescription)")
         }
-        return UIImage(systemName: "xmark.circle.fill") ?? UIImage()
+        return UIImage(systemName: "xmark.circle.fill")!
     }
 }
 
@@ -78,7 +78,9 @@ extension HistoriesViewController: UITableViewDelegate, UITableViewDataSource {
 
         // ここの画像サイズを一律で同じにしたいが、Youtubeのサムネの比率ベースで良さそう
         // またここは画像ではなくボタンで良さそう
-        cell.thumbnailImage.image = getImageByUrl(url: historiesByDate[indexPath.section][indexPath.row].song?.getThumbnailLink() ?? "")
+        let image = getImageByUrl(url: historiesByDate[indexPath.section][indexPath.row].song?.getThumbnailLink() ?? "")
+        cell.thumbnailButton.setImage(image, for: .normal)
+        // ここは現状ボタンサイズに揃うので画像サイズに揃えたい
         return cell
     }
 }

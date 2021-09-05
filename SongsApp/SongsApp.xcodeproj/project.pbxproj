@@ -20,6 +20,9 @@
 		DA0DBB3626E3D13C004E0B89 /* MyList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0DBB3526E3D13C004E0B89 /* MyList.storyboard */; };
 		DA0DBB3926E3D18E004E0B89 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB3826E3D18E004E0B89 /* SettingViewController.swift */; };
 		DA0DBB3B26E3D1D5004E0B89 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0DBB3A26E3D1D5004E0B89 /* Setting.storyboard */; };
+		DA0DBB3E26E48C97004E0B89 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB3D26E48C97004E0B89 /* Array+.swift */; };
+		DA0DBB4126E48EF0004E0B89 /* LoadEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0DBB4026E48EF0004E0B89 /* LoadEnv.swift */; };
+		DA0DBB4326E4910C004E0B89 /* .secret in Resources */ = {isa = PBXBuildFile; fileRef = DA0DBB4226E4910C004E0B89 /* .secret */; };
 		DA57C241252CBD05005F4A71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C240252CBD05005F4A71 /* AppDelegate.swift */; };
 		DA57C243252CBD05005F4A71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57C242252CBD05005F4A71 /* SceneDelegate.swift */; };
 		DA57C24A252CBD08005F4A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA57C249252CBD08005F4A71 /* Assets.xcassets */; };
@@ -72,6 +75,9 @@
 		DA0DBB3526E3D13C004E0B89 /* MyList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyList.storyboard; sourceTree = "<group>"; };
 		DA0DBB3826E3D18E004E0B89 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DA0DBB3A26E3D1D5004E0B89 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		DA0DBB3D26E48C97004E0B89 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		DA0DBB4026E48EF0004E0B89 /* LoadEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadEnv.swift; sourceTree = "<group>"; };
+		DA0DBB4226E4910C004E0B89 /* .secret */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .secret; path = ../../Secret/.secret; sourceTree = "<group>"; };
 		DA57C23D252CBD05005F4A71 /* SongsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA57C240252CBD05005F4A71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA57C242252CBD05005F4A71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB64D9726E117D50054D150 /* GitHubAPI */,
+				DA0DBB3C26E465BF004E0B89 /* YouTube */,
 				DAB64D8726E0B24F0054D150 /* HTTPMethod.swift */,
 			);
 			path = API;
@@ -156,6 +163,21 @@
 				DA0DBB3A26E3D1D5004E0B89 /* Setting.storyboard */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		DA0DBB3C26E465BF004E0B89 /* YouTube */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YouTube;
+			sourceTree = "<group>";
+		};
+		DA0DBB3F26E48ED4004E0B89 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DA0DBB4026E48EF0004E0B89 /* LoadEnv.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		DA57C234252CBD05005F4A71 = {
@@ -192,7 +214,9 @@
 				DA01EEC226E06F7B00EFCF21 /* API */,
 				DA0DBB2926E2F701004E0B89 /* SQLite */,
 				DAB64D9826E124330054D150 /* Extension */,
+				DA0DBB3F26E48ED4004E0B89 /* Common */,
 				DA57C249252CBD08005F4A71 /* Assets.xcassets */,
+				DA0DBB4226E4910C004E0B89 /* .secret */,
 				DA57C24B252CBD08005F4A71 /* LaunchScreen.storyboard */,
 				DA57C24E252CBD08005F4A71 /* Info.plist */,
 			);
@@ -266,6 +290,7 @@
 				DAB64D9926E1245A0054D150 /* UIImage+.swift */,
 				DAB64D9B26E250FF0054D150 /* String+.swift */,
 				DA0DBB2A26E30A24004E0B89 /* Date+.swift */,
+				DA0DBB3D26E48C97004E0B89 /* Array+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -397,6 +422,7 @@
 				DAABC2D926DF77560005C236 /* Root.storyboard in Resources */,
 				DA57C24D252CBD08005F4A71 /* LaunchScreen.storyboard in Resources */,
 				DA01EEB326DF793100EFCF21 /* Home.storyboard in Resources */,
+				DA0DBB4326E4910C004E0B89 /* .secret in Resources */,
 				DA57C24A252CBD08005F4A71 /* Assets.xcassets in Resources */,
 				DA0DBB3B26E3D1D5004E0B89 /* Setting.storyboard in Resources */,
 			);
@@ -424,12 +450,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA01EEB726DF798100EFCF21 /* HistoriesViewController.swift in Sources */,
+				DA0DBB3E26E48C97004E0B89 /* Array+.swift in Sources */,
 				DAB64D9A26E1245A0054D150 /* UIImage+.swift in Sources */,
 				DA0DBB3426E3D0B2004E0B89 /* MyListViewController.swift in Sources */,
 				DA57C241252CBD05005F4A71 /* AppDelegate.swift in Sources */,
 				DAB64D8826E0B24F0054D150 /* HTTPMethod.swift in Sources */,
 				DA0DBB3926E3D18E004E0B89 /* SettingViewController.swift in Sources */,
 				DA01EEB526DF795000EFCF21 /* HomeViewController.swift in Sources */,
+				DA0DBB4126E48EF0004E0B89 /* LoadEnv.swift in Sources */,
 				DAB64D9226E0B3030054D150 /* GitHubAPISearchResponse.swift in Sources */,
 				DA57C243252CBD05005F4A71 /* SceneDelegate.swift in Sources */,
 				DAB64D9E26E26BF80054D150 /* History.swift in Sources */,

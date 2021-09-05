@@ -13,7 +13,7 @@ class HistoriesTableViewCell: UITableViewCell {
     @IBOutlet weak var artistLabel: UILabel!
     @IBOutlet weak var coverLabel: UILabel!
     @IBOutlet weak var keyLabel: UILabel!
-    @IBOutlet weak var thumbnailImage: UIImageView!
+    @IBOutlet weak var thumbnailButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +22,6 @@ class HistoriesTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     

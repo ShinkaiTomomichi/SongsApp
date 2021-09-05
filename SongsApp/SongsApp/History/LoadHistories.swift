@@ -30,7 +30,8 @@ class LoadHistories {
         for history in self.histories {
             dateUnique.append(history.date)
         }
-        dateUnique = Array(Set(dateUnique))
+        // 要素をユニークにして整列
+        dateUnique = Array(Set(dateUnique)).sorted()
         
         for date in dateUnique {
             var temp: [History] = []

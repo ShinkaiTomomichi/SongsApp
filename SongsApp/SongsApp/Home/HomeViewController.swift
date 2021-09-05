@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
         // おすすめを表示する方法はいくつか用意しよう
         navigationItem.title = "ホーム画面"
         
+        LoadEnv.load()
+        
         // Do any additional setup after loading the view.
     }
     

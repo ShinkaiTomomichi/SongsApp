@@ -45,7 +45,7 @@
         <scene sceneID="swY-30-m09">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uMp-Fi-mX7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="sDv-Jp-tkk"/>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="sDv-Jp-tkk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5xo-82-zgx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
